@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:gravity="center"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="350dp"
+        android:layout_height="230dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/shopper"
+        />
+
+    <TextView
+        android:id="@+id/app_slogan"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="140dp"
+        android:text="Seek | Find | Enjoy"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        />
+
+
+/>
+
+
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_design"
+
+        android:padding="10dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="0dp"
+        android:layout_below="@id/app_slogan"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@android:color/darker_gray"
+        android:hint="Phone"
+
+        android:inputType="number"
+        android:textSize="17sp"
+        android:textStyle="bold"
+
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_design"
+
+        android:padding="10dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="0dp"
+        android:layout_below="@id/phone"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@android:color/darker_gray"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="17sp"
+        android:textStyle="bold"
+
+        />
+
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="130dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/buttons"
+        android:padding="20dp"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:text="Login"
+        android:textColor="@android:color/white"
+
+        />
+
+    <TextView
+        android:id="@+id/forget_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forget Password"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/password"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="150dp"
+
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Msg2"
+        android:layout_below="@id/app_slogan"
+        android:textColor="@android:color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="150dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/FormHeading"
+        android:layout_width="344dp"
+        android:layout_height="91dp"
+        android:gravity="center"
+        android:text="Please Enter Your Details To Complete The Order(Only Delivering For Colombo Area)"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="92dp"
+        android:layout_height="55dp"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/FormHeading"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/edit_Text_PersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/FormHeading"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="55dp"
+        android:textStyle="italic"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <TextView
+        android:id= "@+id/textView_Phone_number"
+        android:layout_width="99dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/Name"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="38dp"
+        android:gravity="center"
+        android:text="Phone Number" />
+
+    <EditText
+        android:id="@+id/edit_Text_Phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:textStyle="italic"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="37dp"
+        android:layout_below="@+id/edit_Text_PersonName"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Phone Number"
+
+        />
+
+
+    <TextView
+        android:id="@+id/textView_Address"
+        android:layout_width="103dp"
+        android:layout_height="29dp"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_below= "@+id/textView_Phone_number"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Address"
+
+        />
+
+    <EditText
+        android:id="@+id/editTextText_Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:layout_below= "@+id/textView_Phone_number"
+        android:text="Address"
+        android:textStyle="italic"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="35dp"
+
+        />
+
+    <TextView
+        android:id="@+id/Text_View_ColomboArea"
+        android:layout_width="117dp"
+        android:layout_height="60dp"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@id/editTextText_Address"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Colombo Area(Ex:- Colombo7)" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName9"
+        android:layout_width="211dp"
+        android:layout_height="49dp"
+        android:textStyle="italic"
+        android:inputType="textPersonName"
+        android:text="Colombo 7"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/textView_Address"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="38dp"
+        />
+
+    <Button
+        android:id="@+id/Submit_button"
+        android:layout_width="149dp"
+        android:layout_height="47dp"
+        android:text="Submit"
+        android:background="@drawable/buttons"
+        android:layout_below="@id/editTextTextPersonName9"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        />
+
+
+</RelativeLayout>

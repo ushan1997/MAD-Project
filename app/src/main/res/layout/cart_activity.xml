@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/cart_heading"
+        android:layout_width="218dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="My Cart Items"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <RadioButton
+        android:id="@+id/radio_Button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:layout_below="@id/cart_heading"
+        android:layout_marginStart="20dp"
+        />
+
+    <TextView
+        android:id="@+id/cart_product_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product1_title"
+        android:textSize="17dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/radio_Button1"
+        />
+
+    <ImageView
+        android:id="@+id/cart_imageView"
+        android:layout_width="109dp"
+        android:layout_height="98dp"
+        android:src="@drawable/samsung"
+        android:layout_below="@id/cart_product_name1"
+        android:layout_marginStart="20dp"
+        />
+
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+
+        android:id="@+id/quantity_btn1"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/cart_imageView"
+        android:elevation="6dp"
+        android:gravity="center"
+        app:finalNumber="10"
+        app:initialNumber="1"
+        app:textSize="16dp"
+
+        >
+
+    </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+
+    <TextView
+        android:id="@+id/cart_description1"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_below="@id/cart_product_name1"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/Black"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/samsung_power_bank1"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/cart_price1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price2"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp"
+        android:layout_marginStart="270dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/cart_description1"
+
+        />
+
+    <Button
+        android:id="@+id/car_remove_button1"
+        android:layout_width="146dp"
+        android:layout_height="47dp"
+        android:text="Remove"
+        android:background="@drawable/input_design"
+        android:layout_below="@id/cart_price1"
+        android:layout_marginStart="200dp"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/car_remove_button1"
+        android:background="@android:color/black" />
+
+
+    <RadioButton
+        android:id="@+id/radio_Button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:layout_below="@+id/car_remove_button1"
+        android:layout_marginStart="20dp"
+        />
+
+    <TextView
+        android:id="@+id/cart_product_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product3_title"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/radio_Button2"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/cart_imageView2"
+        android:layout_width="109dp"
+        android:layout_height="98dp"
+        android:layout_below="@id/cart_product_name2"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/mi_back"
+        />
+
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+
+        android:id="@+id/quantity_btn2"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/cart_imageView2"
+        android:elevation="6dp"
+        android:gravity="center"
+        app:finalNumber="10"
+        app:initialNumber="1"
+        app:textSize="16dp"
+
+        >
+
+    </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+
+    <TextView
+        android:id="@+id/cart_description2"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_below="@id/cart_product_name2"
+        android:textColor="@color/Black"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/mi_back_pack"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/cart_price2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price3"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="270dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/cart_description2"
+        />
+
+    <Button
+        android:id="@+id/car_remove_button2"
+        android:layout_width="146dp"
+        android:layout_height="47dp"
+        android:text="Remove"
+        android:background="@drawable/input_design"
+        android:layout_below="@id/cart_price2"
+        android:layout_marginStart="200dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/car_remove_button2"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/cart_total"
+        android:layout_width="155dp"
+        android:layout_height="47dp"
+        android:layout_below="@id/car_remove_button2"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="20dp"
+        android:text="Total : Rs6700"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="672dp" />
+
+    <Button
+        android:id="@+id/cart_button_BuyNow"
+        android:layout_width="157dp"
+        android:layout_height="52dp"
+        android:text="Buy Now"
+        android:background="@drawable/buttons"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="190dp"
+        android:layout_below="@id/car_remove_button2"
+        />
+
+</RelativeLayout>
