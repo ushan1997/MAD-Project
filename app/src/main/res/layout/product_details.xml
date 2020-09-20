@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/product_image_details"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:src="@drawable/samsung"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/product_name_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Power Bank Samsung"
+        android:layout_below="@id/product_image_details"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+
+        />
+    <TextView
+        android:id="@+id/prodct_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/price2"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_below="@+id/product_name_details"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <TextView
+        android:id="@+id/product_description_details1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/samsung_power_bank1"
+        android:gravity="center"
+        android:textColor="@color/Black"
+        android:layout_below="@+id/prodct_price"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+
+        />
+    <TextView
+        android:id="@+id/product_description_details2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/samsung_power_bank2"
+        android:gravity="center"
+        android:textColor="@color/Black"
+        android:layout_below="@+id/product_description_details1"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+
+        />
+
+    <Button
+        android:id="@+id/btn_Buy_now_product"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_description_details2"
+        android:text="Buy Now"
+        android:background="@drawable/buttons"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        />
+
+    <Button
+        android:id="@+id/btn_Add_to_cart_product"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_description_details2"
+        android:text="Add to cart"
+        android:gravity="center"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/input_design"
+        android:layout_marginLeft="200dp"
+        />
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:src="@drawable/ic_baseline_stars_24"
+        android:layout_below="@id/btn_Add_to_cart_product"
+        />
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="120dp"
+        android:src="@drawable/ic_baseline_stars_24"
+        android:layout_below="@id/btn_Add_to_cart_product"
+        />
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="160dp"
+        android:src="@drawable/ic_baseline_stars_24"
+        android:layout_below="@id/btn_Add_to_cart_product"
+        />
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="200dp"
+        android:src="@drawable/ic_baseline_stars_24"
+        android:layout_below="@id/btn_Add_to_cart_product"
+        />
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="240dp"
+        android:src="@drawable/ic_baseline_stars_24"
+        android:layout_below="@id/btn_Add_to_cart_product"
+        />
+
+    <TextView
+        android:id="@+id/rate_now"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/Ratings"
+        android:textSize="15dp"
+        android:textColor="@color/Black"
+        android:textStyle="bold"
+        android:layout_marginStart="150dp"
+        android:layout_below="@id/star5"
+        />
+
+    <EditText
+        android:id="@+id/product_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Add Comment"
+
+        android:layout_below="@+id/rate_now"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        android:layout_marginTop="5dp"
+
+
+        />
+
+
+    <Button
+        android:id="@+id/add_comment_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_comments"
+        android:background="@drawable/buttons"
+        android:text="Post"
+        android:gravity="center"
+        android:layout_marginLeft="170dp"
+        />
+
+    <Button
+        android:id="@+id/add_comment_edit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_comments"
+        android:background="@drawable/buttons"
+        android:text="Edit"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:layout_marginLeft="260dp"
+        />
+
+</RelativeLayout>
