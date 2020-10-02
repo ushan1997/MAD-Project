@@ -2,360 +2,66 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background"
+    android:id="@+id/parent_layout"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <SearchView
-        android:id="@+id/search_bar"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        />
-
-
-
-    <androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="520dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
         android:layout_below="@+id/search_bar"
         app:cardElevation="15dp"
         tools:ignore="MissingDefaultResource">
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
+            android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="600dp">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/Banner"
-                        android:layout_width="match_parent"
-                        android:layout_height="300dp"
-                        android:src="@drawable/banner_add"
-                        />
-
-                    <LinearLayout
+                    <TextView
+                        android:id="@+id/product_name_details_on_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:text="Product Name"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/input_designv2"
-                            android:orientation="vertical">
-
-
-                            <TextView
-                                android:id="@+id/product_name1"
-                                android:layout_width="170dp"
-                                android:layout_height="wrap_content"
-                                android:text="@string/product1_title"
-                                android:textColor="@color/Black"
-                                android:textAlignment="center"
-                                android:textSize="15dp"
-                                android:textStyle="bold"
-
-                                />
-
-                            <ImageButton
-                                android:id="@+id/product_image_1"
-                                android:layout_width="170dp"
-                                android:layout_height="200dp"
-                                android:layout_below="@+id/product_name1"
-                                android:src="@drawable/samsung"
-                                android:layout_marginTop="2dp"
-                                android:scaleType="centerCrop"
-
-                                />
-
-                            <TextView
-                                android:id="@+id/description"
-                                android:layout_width="170dp"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/product_image_1"
-                                android:text="@string/price2"
-                                android:textColor="@color/colorPrimary"
-                                android:textAlignment="center"
-                                android:textSize="15dp"
-                                android:textStyle="bold" />
-
-                            <Button
-                                android:id="@+id/btn_Buy_now1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/button_v2"
-                                android:text="Buy Now"
-                                android:textColor="@android:color/white" />
-
-                            <Button
-                                android:id="@+id/btn_Add_to_cart1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/input_designv2"
-                                android:text="Add to Cart" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/input_designv2"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/product_name2"
-                                android:layout_width="170dp"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/search_bar"
-                                android:layout_marginLeft="0dp"
-                                android:textColor="@color/Black"
-                                android:text="@string/product2_title"
-                                android:textAlignment="center"
-                                android:textSize="15dp"
-                                android:textStyle="bold"
-
-                                />
-
-                            <ImageView
-                                android:id="@+id/product_image_2"
-                                android:layout_width="170dp"
-                                android:layout_height="200dp"
-                                android:layout_below="@+id/product_name"
-                                android:layout_marginLeft="0dp"
-                                android:src="@drawable/face_mask"
-                                android:layout_marginTop="2dp"
-                                android:scaleType="centerCrop"
-
-                                />
-
-                            <TextView
-                                android:id="@+id/description2"
-                                android:layout_width="170dp"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/product_image_1"
-                                android:textColor="@color/colorPrimary"
-                                android:layout_marginLeft="0dp"
-                                android:text="@string/price1"
-                                android:textAlignment="center"
-                                android:textSize="15dp"
-                                android:textStyle="bold" />
-
-                            <Button
-                                android:id="@+id/btn_Buy_now2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/button_v2"
-                                android:text="Buy Now"
-                                android:textColor="@android:color/white" />
-
-                            <Button
-                                android:id="@+id/btn_Add_to_cart2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/input_designv2"
-                                android:text="Add to Cart" />
-
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
+                    <ImageButton
+                        android:id="@+id/product_image_on_home"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
+                        android:layout_height="200dp"
+                        android:layout_below="@id/product_name_details_on_home"
+                        android:layout_marginTop="2dp"
+                        android:scaleType="centerCrop" />
 
-                        >
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/input_designv2"
-                            android:orientation="vertical">
-
-
-                            <TextView
-                                android:id="@+id/product_name3"
-                                android:layout_width="170dp"
-                                android:layout_height="wrap_content"
-                                android:text="@string/product3_title"
-                                android:textColor="@color/Black"
-                                android:textAlignment="center"
-                                android:textSize="15dp"
-                                android:textStyle="bold"
-
-                                />
-
-                            <ImageButton
-                                android:id="@+id/product_image_3"
-                                android:layout_width="170dp"
-                                android:layout_height="200dp"
-                                android:layout_below="@+id/product_name2"
-                                android:src="@drawable/mi_back"
-                                android:layout_marginTop="2dp"
-                                android:scaleType="centerCrop"
-
-                                />
-
-                            <TextView
-                                android:id="@+id/description3"
-                                android:layout_width="170dp"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/product_image_2"
-                                android:textColor="@color/colorPrimary"
-                                android:text="@string/price4"
-                                android:textAlignment="center"
-                                android:textSize="15dp"
-                                android:textStyle="bold" />
-
-                            <Button
-                                android:id="@+id/btn_Buy_now3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/button_v2"
-                                android:text="Buy Now"
-                                android:textColor="@android:color/white" />
-
-                            <Button
-                                android:id="@+id/btn_Add_to_cart3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/input_designv2"
-                                android:text="Add to Cart" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/input_designv2"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/product_name4"
-                                android:layout_width="170dp"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/search_bar"
-                                android:layout_marginLeft="0dp"
-                                android:text="@string/product4_title"
-                                android:textColor="@color/Black"
-                                android:textAlignment="center"
-                                android:textSize="15dp"
-                                android:textStyle="bold"
-
-                                />
-
-                            <ImageView
-                                android:id="@+id/product_image_4"
-                                android:layout_width="170dp"
-                                android:layout_height="200dp"
-                                android:layout_below="@+id/product_name"
-                                android:layout_marginLeft="0dp"
-                                android:textColor="@color/colorPrimary"
-                                android:src="@drawable/rtx_card"
-                                android:layout_marginTop="2dp"
-                                android:scaleType="centerCrop"
-
-                                />
-
-                            <TextView
-                                android:id="@+id/description4"
-                                android:layout_width="170dp"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/product_image_1"
-                                android:layout_marginLeft="0dp"
-                                android:text="@string/price3"
-                                android:textColor="@color/colorPrimary"
-                                android:textAlignment="center"
-                                android:textSize="15dp"
-                                android:textStyle="bold" />
-
-                            <Button
-                                android:id="@+id/btn_Buy_now4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/button_v2"
-                                android:text="Buy Now"
-                                android:textColor="@android:color/white" />
-
-                            <Button
-                                android:id="@+id/btn_Add_to_cart4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/input_designv2"
-                                android:text="Add to Cart" />
-
-
-                        </LinearLayout>
-
-                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/product_description_on_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/product_image"
+                        android:text="Product Description"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
-
-
             </RelativeLayout>
         </ScrollView>
-
     </androidx.cardview.widget.CardView>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_home_navigation"/>
-
-
-    <ImageButton
-        android:id="@+id/bottom_home_navigation"
-        android:layout_width="100dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="0dp"
-        android:src="@drawable/ic_baseline_home_24"
-        android:layout_marginTop="560dp"
-        />
-
-    <ImageButton
-        android:id="@+id/bottom_cart_navigation"
-        android:layout_width="100dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="90dp"
-        android:src="@drawable/ic_baseline_shopping_cart_24"
-        android:layout_marginTop="560dp"
-        />
-    <ImageButton
-        android:id="@+id/bottom_delivery_navigation"
-        android:layout_width="100dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="180dp"
-        android:src="@drawable/ic_baseline_two_wheeler_24"
-        android:layout_marginTop="560dp"
-        />
-    <ImageButton
-        android:id="@+id/bottom_navigation"
-        android:layout_width="100dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="260dp"
-        android:src="@drawable/ic_baseline_account_box_24"
-        android:layout_marginTop="560dp"
-        />
 
 </RelativeLayout>

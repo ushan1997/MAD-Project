@@ -23,6 +23,26 @@
 
     <string name="samsung_power_bank2">7Days Return Warranty not available </string>
 
+    <string name="edit_delivery">Edit Details For Delivery</string>
+
+    <string-array name="numbers">
+        <item>Colombo1</item>
+        <item>Colombo2</item>
+        <item>Colombo3</item>
+        <item>Colombo4</item>
+        <item>Colombo5</item>
+        <item>Colombo6</item>
+        <item>Colombo7</item>
+        <item>Colombo8</item>
+        <item>Colombo9</item>
+        <item>Colombo10</item>
+        <item>Colombo11</item>
+        <item>Colombo12</item>
+        <item>Colombo13</item>
+        <item>Colombo14</item>
+        <item>Colombo15</item>
+    </string-array>
+
 
     <string name="Reusable_face_mask">Reusable Face Mask</string>
 

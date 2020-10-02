@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/cart_details_layout"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_below="@+id/Pending_list_heading"
+        app:cardElevation="15dp"
+        tools:ignore="MissingDefaultResource">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/parent_layout"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+
+            <TextView
+                android:id="@+id/colombo-area"
+                android:layout_width="107dp"
+                android:layout_height="47dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="142dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/order6"
+                android:textColor="@color/Black"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/order_address"
+                android:layout_width="105dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/order6"
+                android:textColor="@color/Black"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_design"
+                android:layout_marginStart="270dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/quantity_btn"
+                android:background="@color/colorAccent"
+                ></View>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

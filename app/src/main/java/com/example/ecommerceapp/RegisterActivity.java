@@ -32,82 +32,85 @@ public class RegisterActivity extends AppCompatActivity {
     private ProgressBar LoadingBar;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-
-        CreateRegisterButton =(Button)findViewById(R.id.register_button);
-        CreateRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            protected void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.activity_register);
 
-                Intent intent=new Intent(RegisterActivity.this,LoginActivity.class);
-                startActivity(intent);
+                CreateRegisterButton =(Button)findViewById(R.id.register_button);
+                CreateRegisterButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Intent intent=new Intent(RegisterActivity.this,LoginActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+                CreateRegisterButton  =(Button)findViewById(R.id.register_button);
+                InputEmail           =(EditText)findViewById(R.id.register_Email_input);
+                InputUsername        =(EditText)findViewById(R.id.register_username_input);
+                InputPhoneNum        =(EditText)findViewById(R.id.register_phone_number_input);
+                InputPassword        =(EditText)findViewById(R.id.register_password_input) ;
+                InputConfirmpw       =(EditText)findViewById(R.id.register_confirm_password_input);
+
+
+
+
+                CreateRegisterButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        CreateAccount(); //calling create account function in onCreate function
+                    }
+                });
             }
-        });
-
-        CreateRegisterButton  =(Button)findViewById(R.id.register_button);
-        InputEmail           =(EditText)findViewById(R.id.register_Email_input);
-        InputUsername        =(EditText)findViewById(R.id.register_username_input);
-        InputPhoneNum        =(EditText)findViewById(R.id.register_phone_number_input);
-        InputPassword        =(EditText)findViewById(R.id.register_password_input) ;
-       InputConfirmpw       =(EditText)findViewById(R.id.register_confirm_password_input);
 
 
-        CreateRegisterButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CreateAccount();
-            }
-        });
-    }
+            private void CreateAccount() {
 
-    private void CreateAccount() {
-
-            String email    = InputEmail.getText().toString();
-            String username = InputUsername.getText().toString();
-            String phno     = InputPhoneNum.getText().toString();
-            String password = InputPassword.getText().toString();
-            String confirmPw = InputConfirmpw.getText().toString();
+                    String email    = InputEmail.getText().toString();
+                    String username = InputUsername.getText().toString();
+                    String phno     = InputPhoneNum.getText().toString();
+                    String password = InputPassword.getText().toString();
+                    String confirmPw = InputConfirmpw.getText().toString();
 
 
 
-            if(TextUtils.isEmpty(email)){
-                Toast.makeText(this, "Please Enter your Email", Toast.LENGTH_SHORT).show();
+                    if(TextUtils.isEmpty(email)){
+                        Toast.makeText(this, "Please Enter your Email", Toast.LENGTH_SHORT).show();
 
-            }
-            else if(TextUtils.isEmpty(username)){
-                Toast.makeText(this, "Please Enter your Username", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(TextUtils.isEmpty(username)){
+                        Toast.makeText(this, "Please Enter your Username", Toast.LENGTH_SHORT).show();
 
-            }
-            else if(TextUtils.isEmpty(phno)){
-                Toast.makeText(this, "Please Enter your PhoneNumber", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(TextUtils.isEmpty(phno)){
+                        Toast.makeText(this, "Please Enter your PhoneNumber", Toast.LENGTH_SHORT).show();
 
-            }
-            else if(TextUtils.isEmpty(password)){
-                Toast.makeText(this, "Please Enter your PassWord", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(TextUtils.isEmpty(password)){
+                        Toast.makeText(this, "Please Enter your PassWord", Toast.LENGTH_SHORT).show();
 
-            }
-            else if(TextUtils.isEmpty(confirmPw)){
-                Toast.makeText(this, "Enter  PassWord Again", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(TextUtils.isEmpty(confirmPw)){
+                        Toast.makeText(this, "Enter  PassWord Again", Toast.LENGTH_SHORT).show();
 
-            }else if(!password.equals(confirmPw)){
+                    }else if(!password.equals(confirmPw)){
 
-                Toast.makeText(this,"password should be equal",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this,"password should be equal",Toast.LENGTH_SHORT).show();
 
-            } else{
+                    } else{
 
-               ValidatePhoneNumber(email,username,phno,password);
+                       ValidatePhoneNumber(email,username,phno,password);//calling database connection if all details are ready
 
 
-            }
+                    }
 
             }
 
             private void ValidatePhoneNumber(final String email, final String username, final String phno, final String password) {
 
-                 final DatabaseReference RootRef;
+                 final DatabaseReference RootRef;//getting the database connection
                  RootRef = FirebaseDatabase.getInstance().getReference();
 
                 RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -139,9 +142,6 @@ public class RegisterActivity extends AppCompatActivity {
 
                                         }
                                     });
-
-
-
                         }
                         else{
                             Toast.makeText(RegisterActivity.this,"This "+phno+ "already exist",Toast.LENGTH_SHORT).show();
