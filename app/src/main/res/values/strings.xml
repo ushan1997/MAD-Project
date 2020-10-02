@@ -1,0 +1,127 @@
+<resources>
+    <string name="app_name">SHOPPERZ</string>
+    <string name="Msg1">Welcome</string>
+    <string name="Msg2">Login</string>
+    <string name="Msg3">Create Account</string>
+    <string name="Msg4">Reset Password</string>
+    <string name="login_to">please wait</string>
+    <string name="as_a_admin">As a Admin</string>
+    <string name="delivery">Delivery</string>
+
+
+    <string name="Ratings">Rate Now</string>
+
+    <string name="product1_title">Power Bank Samsung</string>
+
+    <string name="product2_title">Reusable Face Mask</string>
+
+    <string name="product3_title">MI Mini Back Pack</string>
+
+    <string name="product4_title">RTX 2080 TI</string>
+
+    <string name="samsung_power_bank1">2600mAh Fast Charging support Buy 50 and save up to Rs 5,513</string>
+
+    <string name="samsung_power_bank2">7Days Return Warranty not available </string>
+
+    <string name="edit_delivery">Edit Details For Delivery</string>
+
+    <string-array name="numbers">
+        <item>Colombo1</item>
+        <item>Colombo2</item>
+        <item>Colombo3</item>
+        <item>Colombo4</item>
+        <item>Colombo5</item>
+        <item>Colombo6</item>
+        <item>Colombo7</item>
+        <item>Colombo8</item>
+        <item>Colombo9</item>
+        <item>Colombo10</item>
+        <item>Colombo11</item>
+        <item>Colombo12</item>
+        <item>Colombo13</item>
+        <item>Colombo14</item>
+        <item>Colombo15</item>
+    </string-array>
+
+
+    <string name="Reusable_face_mask">Reusable Face Mask</string>
+
+    <string name="mi_back_pack">Service : 7Days Return Warranty not available</string>
+
+    <string name="price1">Rs 500</string>
+
+    <string name="price2">Rs 1500</string>
+
+    <string name="price3">Rs 5200</string>
+
+    <string name="price4">Rs 2500</string>
+
+    <string name="price5">Rs 4500</string>
+
+    <string name="pending_list_heading">Pending Order List</string>
+
+    <string name="colombo1">Colombo 1</string>
+
+    <string name="colombo2">Colombo 2</string>
+
+    <string name="colombo3">Colombo 3</string>
+
+    <string name="colombo4">Colombo 4</string>
+
+    <string name="colombo5">Colombo 5</string>
+
+    <string name="colombo6">Colombo 6</string>
+
+    <string name="order1">No 5,Rose Avenue,Colombo 1</string>
+
+    <string name="order2">No 6,Malwaththa Road,Colombo 1</string>
+
+    <string name="order3">No 16,Bus stand,Colombo 1</string>
+
+    <string name="order4">No 16,Slave House,Colombo 2 </string>
+
+    <string name="order5">No 3,Station Road,Colombo 2 </string>
+
+    <string name="order6">No 3,Galahad road,Colombo 2 </string>
+
+
+    <string name="available">AVAILABLE</string>
+
+    <string name="pending">PENDING</string>
+
+    <string name="processed">PROCESSED</string>
+
+    <string name="processing">PROCESSING</string>
+
+    <string name="delivered">DELIVERED</string>
+
+    <string name="createaccount">CREATE YOUR ACCOUNT</string>
+
+    <string name="termsAndconditions">By clicking Join Us, you agree to our terms and conditions </string>
+
+    <string name="yourname">Your Name</string>
+
+    <string name="email">Email</string>
+
+    <string name="phonenumber">Phone Number</string>
+
+    <string name="address">Address</string>
+
+    <string name="password">Password</string>
+
+    <string name="confirmpassword">Confirm Password</string>
+
+
+    <string name="Msg01">Courier Login</string>
+    <string name="reset">Reset Password</string>
+    <string name="create">Create Courier Account</string>
+    <string name="dashboard">Courier Dashboard</string>
+    <string name="tile1">New Orders</string>
+    <string name="tile2">Orders In Progress</string>
+    <string name="tile3">Notifications</string>
+    <string name="tile4">My Earnings</string>
+    <string name="acc">MANAGE ACCOUNT</string>
+    <string name="edit">Edit Profile</string>
+
+
+</resources>
