@@ -64,7 +64,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent=new Intent(HomeActivity.this, MyProfile.class);
+                Intent intent=new Intent(HomeActivity.this, ViewMyProfile.class);
                 startActivity(intent);
             }
         });

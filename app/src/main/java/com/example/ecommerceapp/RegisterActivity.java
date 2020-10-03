@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,7 +29,7 @@ import java.util.HashMap;
 public class RegisterActivity extends AppCompatActivity {
 
     private Button CreateRegisterButton;
-    private EditText InputEmail,InputUsername,InputPhoneNum,InputPassword,InputConfirmpw;
+    private EditText InputEmail,InputUsername,InputPhoneNum,InputPassword,InputConfirmpw,InputAddress;
     private ProgressBar LoadingBar;
 
 
@@ -53,6 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
                 InputPhoneNum        =(EditText)findViewById(R.id.register_phone_number_input);
                 InputPassword        =(EditText)findViewById(R.id.register_password_input) ;
                 InputConfirmpw       =(EditText)findViewById(R.id.register_confirm_password_input);
+                InputAddress = (EditText)findViewById(R.id.register_address_input);
 
 
 
@@ -73,6 +75,7 @@ public class RegisterActivity extends AppCompatActivity {
                     String phno     = InputPhoneNum.getText().toString();
                     String password = InputPassword.getText().toString();
                     String confirmPw = InputConfirmpw.getText().toString();
+                    String address   =InputAddress.getText().toString();
 
 
 
@@ -80,12 +83,23 @@ public class RegisterActivity extends AppCompatActivity {
                         Toast.makeText(this, "Please Enter your Email", Toast.LENGTH_SHORT).show();
 
                     }
+                    else if(!Patterns.EMAIL_ADDRESS.matcher(InputEmail.getText().toString()).matches()){
+                        InputEmail.setError("Please enter a valid Email");
+                        Toast.makeText(this, "Please enter a valid Email", Toast.LENGTH_SHORT).show();
+                    }
                     else if(TextUtils.isEmpty(username)){
                         Toast.makeText(this, "Please Enter your Username", Toast.LENGTH_SHORT).show();
 
                     }
                     else if(TextUtils.isEmpty(phno)){
                         Toast.makeText(this, "Please Enter your PhoneNumber", Toast.LENGTH_SHORT).show();
+
+                    }
+                    else if(!InputPhoneNum.getText().toString().matches("[0-9]{10}")){
+                        InputPhoneNum.setError("The phone number should include 10 characters");
+                    }
+                    else if(TextUtils.isEmpty(address)){
+                        Toast.makeText(this, "Please Enter your Address", Toast.LENGTH_SHORT).show();
 
                     }
                     else if(TextUtils.isEmpty(password)){
@@ -101,14 +115,14 @@ public class RegisterActivity extends AppCompatActivity {
 
                     } else{
 
-                       ValidatePhoneNumber(email,username,phno,password);//calling database connection if all details are ready
+                       ValidatePhoneNumber(email,username,phno,address,password);//calling database connection if all details are ready
 
 
                     }
 
             }
 
-            private void ValidatePhoneNumber(final String email, final String username, final String phno, final String password) {
+            private void ValidatePhoneNumber(final String email, final String username, final String phno,final String address, final String password) {
 
                  final DatabaseReference RootRef;//getting the database connection
                  RootRef = FirebaseDatabase.getInstance().getReference();
@@ -123,6 +137,7 @@ public class RegisterActivity extends AppCompatActivity {
                             userdatamap.put("phno",phno);
                             userdatamap.put("email",email);
                             userdatamap.put("username",username);
+                            userdatamap.put("address",address);
                             userdatamap.put("password",password);
 
 
