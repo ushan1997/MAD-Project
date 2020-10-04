@@ -25,8 +25,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import java.io.ByteArrayOutputStream;
-import java.text.BreakIterator;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -46,6 +44,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
     private Cart cart;
     DatabaseReference dbRef;
     public static final int stratid= 0;
+
 
 
     private RatingBar ratingBar;
@@ -322,7 +321,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         });
     }
 
-    public static int generateCartId(){
+    public int generateCartId(){
 
         int cartId;
         int next =list.size();
@@ -337,6 +336,13 @@ public class ProductDetailsActivity extends AppCompatActivity {
        // String.valueOf(cartId)
     }
 
+    public int showEligibleItemQuantity(int x){
+        if(x>10){
+            return 1;
+        }else{
+           return  0;
+        }
 
+    }
 
 }
