@@ -46,6 +46,7 @@
 
 
 
+
     <EditText
         android:id="@+id/phone"
         android:layout_width="match_parent"
@@ -97,8 +98,10 @@
         android:text="Forget Password"
         android:textColor="@android:color/black"
         android:layout_below="@id/password"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="150dp"
+       android:textSize="17dp"
+
 
         />
 

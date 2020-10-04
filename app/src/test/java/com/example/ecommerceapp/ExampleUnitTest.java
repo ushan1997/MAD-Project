@@ -28,6 +28,12 @@ public class ExampleUnitTest {
     }
 
     @Test
+    public void TestCalcAmount(){
+        int test = cart.calcAmount(10000,34);/**IT19753140/Gunaratne U.A/Metro Weekday*/
+        assertEquals(340000,test);/**IT19753140/Gunaratne U.A/Metro Weekday*/
+    }
+
+    @Test
     public void addition_isCorrect() {
 
         assertEquals(4, 2 + 2);/**IT19753140/Gunaratne U.A/Metro Weekday*/
@@ -47,12 +53,6 @@ public class ExampleUnitTest {
              assertEquals( 1,test);/**IT19753140/Gunaratne U.A/Metro Weekday*/
 
     }
-    @Test
-    public void TestCalcAmount(){
-        int test = cart.calcAmount(10000,34);/**IT19753140/Gunaratne U.A/Metro Weekday*/
-        assertEquals(340000,test);/**IT19753140/Gunaratne U.A/Metro Weekday*/
-    }
-
 
 }
 

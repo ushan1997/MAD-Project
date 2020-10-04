@@ -14,10 +14,7 @@
             android:layout_height="wrap_content"
             xmlns:tools="http://schemas.android.com/tools" >
 
-                <SearchView
-                    android:id="@+id/search_bar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+
              </RelativeLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
