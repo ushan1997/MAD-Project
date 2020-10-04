@@ -154,9 +154,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
 
     private void AddComment() {
-
         String comment= comment_add.getText().toString().toLowerCase();
-        // String code =itemcode.getText().toString();
 
         if(comment.equals("")){
             Toast.makeText(this, "Please add your comment ", Toast.LENGTH_SHORT).show();
