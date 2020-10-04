@@ -47,7 +47,6 @@ public class AdminProfileUpdate extends AppCompatActivity {
         });
     }
 
-
     private void updateOnlyAdminInfo() {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Admin");
 
@@ -56,8 +55,6 @@ public class AdminProfileUpdate extends AppCompatActivity {
         userMap.put("Name", AdminNameUpdate.getText().toString());
         userMap.put("Email", AdminEmailUpdate.getText().toString());
         userMap.put("Address", AdminAddressUpdate.getText().toString());
-
-
         ref.child(Phone).updateChildren(userMap);
 
         startActivity(new Intent(AdminProfileUpdate.this, profile.class));
@@ -78,12 +75,10 @@ public class AdminProfileUpdate extends AppCompatActivity {
                     String Name          = snapshot.child("Name").getValue().toString();
                     String Address        =snapshot.child("Address").getValue().toString();
 
-
                     AdminPhoneUpdate.setText(Phone);
                     AdminNameUpdate.setText(Name);
                     AdminEmailUpdate.setText(Email);
                     AdminAddressUpdate.setText(Address);
-
                 }
             }
 

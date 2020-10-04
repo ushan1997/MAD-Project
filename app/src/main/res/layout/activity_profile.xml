@@ -155,18 +155,7 @@
                     android:textSize="19sp"/>
 
 
-                <Button
-                    android:id="@+id/login_btn"
-                    android:layout_width="280dp"
-                    android:layout_height="45dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:text="Log Out"
-                    android:textAllCaps="false"
-                    android:background="@drawable/buttons"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold"
-                    android:textSize="19sp"/>
+
 
             </LinearLayout>
 
