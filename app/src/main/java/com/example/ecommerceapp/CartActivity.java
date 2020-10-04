@@ -50,6 +50,8 @@ public class CartActivity extends AppCompatActivity {
     private ArrayList<Cart> cartList= new ArrayList<>() ;
     DatabaseReference dbRef;
 
+    int amount ;
+
 
 
 
@@ -119,9 +121,13 @@ public class CartActivity extends AppCompatActivity {
                 holder.productQuantity.setText("Quantity "+model.getPquantity());
                 Picasso.get().load(model.getPimage()).into(holder.product_image );
 
-                calcTotPrice= (Integer.valueOf(model.getPprice())*Integer.valueOf(model.getPquantity()));
+//                calcTotPrice= (Integer.valueOf(model.getPprice())*Integer.valueOf(model.getPquantity()));
+//
+//                AllProductPrice = AllProductPrice + calcTotPrice;
+                int price=Integer.valueOf(model.getPprice());
+                int quantity =Integer.valueOf(model.getPquantity());
 
-                AllProductPrice = AllProductPrice + calcTotPrice;
+                AllProductPrice=calcAmount(price,quantity);
 
                     holder.itemView.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -138,7 +144,8 @@ public class CartActivity extends AppCompatActivity {
 
                                     if(i==0) {
 
-                                       Task<Void> deleteFile=cartListRef.child("Users View").child(Prevalent.currentOnlineUser.getPhno()).child("Product").child(String.valueOf(model.getPcode())).removeValue();
+                                       Task<Void> deleteFile=cartListRef.child("Users View").
+                                               child(Prevalent.currentOnlineUser.getPhno()).child("Product").child(String.valueOf(model.getPcode())).removeValue();
                                        deleteFile .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                     @Override
                                                     public void onComplete(@NonNull Task<Void> task) {
@@ -171,5 +178,14 @@ public class CartActivity extends AppCompatActivity {
         adapter.startListening();
     }
 
+    public int calcAmount(int x,int y){
+
+
+        int calcTotPrice;
+        calcTotPrice =x*y;
+        amount =amount+calcTotPrice;
+
+        return amount;
+    }
 
 }
