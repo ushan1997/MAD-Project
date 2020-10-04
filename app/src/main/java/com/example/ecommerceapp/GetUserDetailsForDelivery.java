@@ -102,7 +102,8 @@ public class GetUserDetailsForDelivery extends AppCompatActivity implements Adap
             }
         });
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Cart").child("Users View").child(Prevalent.currentOnlineUser.getPhno()).child("Product");
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Cart").child("Users View")
+                .child(Prevalent.currentOnlineUser.getPhno()).child("Product");
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -248,41 +249,41 @@ public class GetUserDetailsForDelivery extends AppCompatActivity implements Adap
 
     }
 
-    private void editOrderForm() {
-
-        final Orders order = new Orders();
-        final DatabaseReference updateOrderRef = FirebaseDatabase.getInstance().getReference().child("Orders");
-        updateOrderRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.hasChild(Prevalent.currentOnlineUser.getPhno())){
-                    try{
-
-                        order.setAddress(edit_text_address.getText().toString().trim());
-                        order.setPhoneNo(edit_Text_Phone .getText().toString().trim());
-                        order.setName(edit_Text_PersonName.getText().toString().trim());
-                        order.setColomboArea(colomboArea);
-
-                        DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("Orders").child(Prevalent.currentOnlineUser.getPhno());
-                        dbRef.setValue(order);
-
-                        Toast.makeText(getApplicationContext(),"Data Uploaded Successfully",Toast.LENGTH_SHORT).show();
-
-
-                    }catch (NumberFormatException e){
-
-                        Toast.makeText(getApplicationContext(),"Data Uploaded Failure",Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-    }
+//    private void editOrderForm() {
+//
+//        final Orders order = new Orders();
+//        final DatabaseReference updateOrderRef = FirebaseDatabase.getInstance().getReference().child("Orders");
+//        updateOrderRef.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                if(snapshot.hasChild(Prevalent.currentOnlineUser.getPhno())){
+//                    try{
+//
+//                        order.setAddress(edit_text_address.getText().toString().trim());
+//                        order.setPhoneNo(edit_Text_Phone .getText().toString().trim());
+//                        order.setName(edit_Text_PersonName.getText().toString().trim());
+//                        order.setColomboArea(colomboArea);
+//
+//                        DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("Orders").child(Prevalent.currentOnlineUser.getPhno());
+//                        dbRef.setValue(order);
+//
+//                        Toast.makeText(getApplicationContext(),"Data Uploaded Successfully",Toast.LENGTH_SHORT).show();
+//
+//
+//                    }catch (NumberFormatException e){
+//
+//                        Toast.makeText(getApplicationContext(),"Data Uploaded Failure",Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
+//
+//    }
     public void clearConroles(){
 
         edit_Text_PersonName.setText("");

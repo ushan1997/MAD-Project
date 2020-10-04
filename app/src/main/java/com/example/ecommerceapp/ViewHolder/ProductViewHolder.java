@@ -1,9 +1,9 @@
+
+/**IT1975140
+ Gunaratne U.A
+ Metro Weekday*/
+
 package com.example.ecommerceapp.ViewHolder;
-
-/*IT1975140
-Gunaratne U.A
-Metro Weekday*/
-
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
