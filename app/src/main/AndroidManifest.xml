@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditUserDetailsForDelivery"></activity>
+        <activity android:name=".productContent"></activity>
+        <activity android:name=".editProducts" />
+        <activity android:name=".AdminProfileUpdate" />
+        <activity android:name=".ViewHolder.AdminProfileUpdate" />
+        <activity android:name=".EditUserDetailsForDelivery" />
         <activity android:name=".OrdersInProgress" />
         <activity android:name=".MyEarnings" />
         <activity android:name=".CourierResetPasswordActivity" />

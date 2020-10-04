@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".profile">
 
     <RelativeLayout
@@ -12,7 +13,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:background="@color/background"
+            android:background="@color/purewhite"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -53,15 +54,16 @@
                 android:src="@drawable/user" />
 
             <TextView
-                android:id="@+id/username"
+                android:id="@+id/AdminProfileNameTextview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="Nisali Jasinghe"
+                android:text="Name"
                 android:textColor="@color/Black"
                 android:textStyle="bold"
                 android:textSize="21sp"/>
+
 
             <LinearLayout
                 android:id="@+id/linearlayout1"
@@ -77,13 +79,61 @@
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
+                        android:src="@drawable/ic_baseline_mail_24"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="17dp"/>
+                    <TextView
+                        android:id="@+id/AdminProfileEmailTextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="@color/Black"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_baseline_phone_24"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="17dp"/>
+                    <TextView
+                        android:id="@+id/AdminProfilePhoneTextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PhoneNumber"
+                        android:textColor="@color/Black"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
                         android:src="@drawable/ic_baseline_person_24"
                         android:layout_marginLeft="70dp"
                         android:layout_marginTop="17dp"/>
                     <TextView
+                        android:id="@+id/AdminProfileAddressTextview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Edit Profile Information"
+                        android:text="Address"
                         android:textColor="@color/Black"
                         android:textSize="16sp"
                         android:layout_marginLeft="20dp"
@@ -91,53 +141,19 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="15dp">
+                <Button
+                    android:id="@+id/UpdateProfilebtn"
+                    android:layout_width="280dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:text="Update "
+                    android:textAllCaps="false"
+                    android:background="@drawable/buttons"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:textSize="19sp"/>
 
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:src="@drawable/ic_baseline_lock_24"
-                        android:layout_marginLeft="70dp"
-                        android:layout_marginTop="17dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Change Password"
-                        android:textColor="@color/Black"
-                        android:textSize="16sp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="15dp">
-
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:src="@drawable/ic_baseline_delete_24"
-                        android:layout_marginLeft="70dp"
-                        android:layout_marginTop="17dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Deactivate My profile"
-                        android:textColor="@color/Black"
-                        android:textSize="16sp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"/>
-
-                </LinearLayout>
 
                 <Button
                     android:id="@+id/login_btn"
@@ -153,6 +169,8 @@
                     android:textSize="19sp"/>
 
             </LinearLayout>
+
+
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>
