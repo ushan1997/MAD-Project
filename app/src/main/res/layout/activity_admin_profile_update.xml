@@ -16,32 +16,31 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/createaccount"
+            android:text="Update Profile Information"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:fontFamily="sans-serif-medium"
             android:textColor="@color/Black"
             android:textSize="25sp"
             android:textStyle="bold"/>
 
         <EditText
-            android:id="@+id/create_account_username"
+            android:id="@+id/adminNameUpdate"
             android:layout_width="310dp"
             android:layout_height="45dp"
             android:drawableStart="@drawable/ic_baseline_name"
             android:drawablePadding="12dp"
-            android:hint="@string/yourname"
-            android:elevation="5dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:paddingLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/input_design"
+            android:elevation="5dp"
+            android:hint="@string/yourname"
             android:inputType="text"
-            android:cursorVisible="true"
-            android:textColor="@color/Black"
-            android:background="@drawable/input_design"/>
+            android:paddingLeft="15dp"
+            android:textColor="@color/Black" />
 
         <EditText
-            android:id="@+id/create_account_email_input"
+            android:id="@+id/adminEmailUpdate"
             android:layout_width="310dp"
             android:layout_height="45dp"
             android:drawableStart="@drawable/ic_baseline_mail_24"
@@ -49,94 +48,61 @@
             android:hint="@string/email"
             android:elevation="5dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:paddingLeft="15dp"
             android:inputType="textWebEmailAddress"
             android:textColor="@color/Black"
             android:background="@drawable/input_design"/>
 
         <EditText
-            android:id="@+id/create_account_phonenumber_input"
+            android:id="@+id/adminPhoneUpdate"
             android:layout_width="310dp"
             android:layout_height="45dp"
+            android:hint="@string/phonenumber"
             android:drawableStart="@drawable/ic_baseline_phone_24"
             android:drawablePadding="12dp"
-            android:hint="@string/phonenumber"
             android:elevation="5dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:paddingLeft="15dp"
             android:inputType="number"
             android:textColor="@color/Black"
             android:background="@drawable/input_design"/>
 
         <EditText
-            android:id="@+id/create_account_address_input"
+            android:id="@+id/adminAddressUpdate"
             android:layout_width="310dp"
             android:layout_height="45dp"
+            android:hint="@string/address"
             android:drawableStart="@drawable/ic_baseline_location"
             android:drawablePadding="12dp"
-            android:hint="@string/address"
             android:elevation="5dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:paddingLeft="15dp"
             android:inputType="text"
             android:textColor="@color/Black"
             android:background="@drawable/input_design"/>
 
 
-        <EditText
-            android:id="@+id/create_account_password"
-            android:layout_width="310dp"
-            android:layout_height="45dp"
-            android:drawableStart="@drawable/ic_baseline_password"
-            android:drawablePadding="12dp"
-            android:hint="@string/password"
-            android:elevation="5dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:paddingLeft="15dp"
-            android:inputType="textPassword"
-            android:textColor="@color/Black"
-            android:background="@drawable/input_design">
 
-        </EditText>
 
-        <EditText
-            android:id="@+id/create_account_confirmpassword"
-            android:layout_width="310dp"
-            android:layout_height="45dp"
-            android:drawableStart="@drawable/ic_baseline_password"
-            android:drawablePadding="12dp"
-            android:hint="@string/confirmpassword"
-            android:elevation="5dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:paddingLeft="15dp"
-            android:inputType="textPassword"
-            android:textColor="@color/Black"
-            android:background="@drawable/input_design"/>
+
 
         <Button
-            android:id="@+id/Admin_Register_Button"
+            android:id="@+id/updatebtn2"
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:text="Register"
+            android:layout_marginTop="40dp"
+            android:text="Update"
             android:textAllCaps="false"
             android:background="@drawable/buttons"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:textSize="19sp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/termsAndconditions"
-            android:layout_gravity="center"/>
+
 
     </LinearLayout>
 </RelativeLayout>
