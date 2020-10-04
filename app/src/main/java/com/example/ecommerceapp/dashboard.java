@@ -28,7 +28,7 @@ public class dashboard extends AppCompatActivity implements View.OnClickListener
         card3.setOnClickListener(this);
         card4.setOnClickListener(this);
         card5.setOnClickListener(this);
-        //card6.setOnClickListener(this);
+        card6.setOnClickListener(this);
 
     }
 
@@ -60,18 +60,23 @@ public class dashboard extends AppCompatActivity implements View.OnClickListener
                 intent = new Intent(this, orderList.class);
                 startActivity(intent);
                 break;
+
+            case R.id.c6:
+                intent = new Intent(this, adminlogout.class);
+                startActivity(intent);
+                break;
         }
 
-        card6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openDialog();
-            }
-        });
+       // card6.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+            //public void onClick(View view) {
+                //openDialog();
+           // }
+        //});
     }
 
-    private void openDialog() {
+   /* private void openDialog() {
         LogoutDialog logoutdialog = new LogoutDialog();
         logoutdialog.show(getSupportFragmentManager(), "logoutdialog");
-    }
+    }*/
 }
